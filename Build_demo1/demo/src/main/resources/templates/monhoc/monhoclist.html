@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách người dùng</title>
+</head>
+<body>
+<h1>Danh sách người dùng</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="monhoc : ${monhoc}">
+        <td th:text="${monhoc.id}"></td>
+        <td th:text="${monhoc.title}"></td>
+        <img th:src="@{${monhoc.image}}" alt="image" style="width: 100px;height: 70px;">
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
